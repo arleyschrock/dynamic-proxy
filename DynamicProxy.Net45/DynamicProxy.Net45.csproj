@@ -45,7 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DynamicProxy.Net45.nuspec" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="..\DynamicProxy\DynamicProxy.projitems" Label="Shared" />
   <Import Project="..\DynamicProxy.Emit\DynamicProxy.Emit.projitems" Label="Shared" />
@@ -58,7 +57,7 @@
   </Target>
   -->
   <Target Name="AfterBuild">
-    <Exec Command="nuget pack $(ProjectFileName) -OutputDirectory $(OutDir)">
+    <Exec Command="nuget pack $(ProjectFileName) -OutputDirectory $(ProjectDir)$(OutDir) -Properties Configuration=$(Configuration)">
     </Exec>
   </Target>
 </Project>
