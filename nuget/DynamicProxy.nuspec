@@ -1,7 +1,7 @@
 <package>
   <metadata>
-    <id>DynamicProxy</id>
-    <version>1.0.4</version>
+    <id>dynamic-proxy</id>
+    <version>1.0.5</version>
     <authors>kirk,arleyschrock</authors>
     <owners>kirk</owners>
     <projectUrl>https://github.com/arleyschrock/Dynamic-proxy</projectUrl>
