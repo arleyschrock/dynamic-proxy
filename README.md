@@ -1,11 +1,11 @@
-# sexy-proxy
+# Dynamic-proxy
 Async-enabled proxy generator with support for either compile-time or runtime 
 based generation.  By "proxy generator" we mean being able to take an existing 
 class or interface and inject an interceptor that can generically handle each 
 method in the source type and choose when and whether to pass the invocation off
 to the original implementation (if any).  The idea is similar to [Castle's 
 DynamicProxy](http://www.castleproject.org/projects/dynamicproxy/) but in 
-contrast to that library, *sexy-proxy* is fully async/await enabled.  By that, we 
+contrast to that library, *Dynamic-proxy* is fully async/await enabled.  By that, we 
 mean the methods around which you are proxying can return `Task` or `Task<T>` 
 and your *interceptor* itself can use `async` and `await` without having to 
 fuss with awkward uses of `.ContinueWith`.
@@ -14,7 +14,7 @@ fuss with awkward uses of `.ContinueWith`.
 
 Install using nuget:
 
-    Install-Package sexy-proxy
+    Install-Package Dynamic-proxy
 	
 ## Getting Started
 
@@ -91,7 +91,7 @@ advantage of this library.
 
 ### Generator Types
 
-*sexy-proxy* provides two key ways of generating the proxy.  One uses 
+*Dynamic-proxy* provides two key ways of generating the proxy.  One uses 
 `Reflection.Emit` and is simple and works out of the box.  (it has no dependencies)
 However, it has two key limitations:
 
@@ -102,7 +102,7 @@ that the type be public).
 Furthermore, any costs associated with generating a proxy (admitedly fairly minimal) are incurrred
 at runtime rather than compile time.
 
-If any of these concerns are paramount, *sexy-proxy* provides an alternative generator
+If any of these concerns are paramount, *Dynamic-proxy* provides an alternative generator
 that uses [Fody](https://github.com/Fody/Fody). This is a tool that allows the proxies
 to be generated at compile-time.  This addresses all the aforementioned issues. The 
 downsides of using Fody are minimal:
@@ -169,6 +169,6 @@ which of course is often exactly the right approach.
 
 Other times, however, the behavior you want to apply can be generalized such that you'd
 rather not have to override each method individually. (for example, logging how long it 
-took to invoke each method)  In such a scenario, you can use *sexy-proxy* to create a 
+took to invoke each method)  In such a scenario, you can use *Dynamic-proxy* to create a 
 proxy where the `Proceed` method will actually invoke the method on an arbitrary 
 instance of the type that you provide when instantiating your proxy.
