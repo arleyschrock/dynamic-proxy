@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>dynamic-proxy</id>
+    <version>1.0.6</version>
+    <title>dynamic-proxy</title>
+    <authors>arleyschrock</authors>
+    <owners>arleyschrock</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Fody-based proxy generator with support for async patterns - based on sexy-proxy but with a slightly different name</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>dynamic proxy dynamicproxy async proxy asyncproxy</tags>
+  </metadata>
+</package>
