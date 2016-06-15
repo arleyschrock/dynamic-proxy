@@ -2,14 +2,14 @@
   <metadata>
     <id>DynamicProxy</id>
     <version>1.0.4</version>
-    <authors>kirk</authors>
+    <authors>kirk,arleyschrock</authors>
     <owners>kirk</owners>
-    <projectUrl>https://github.com/kswoll/Dynamic-proxy</projectUrl>
+    <projectUrl>https://github.com/arleyschrock/Dynamic-proxy</projectUrl>
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
 	  <releaseNotes>Initial release.</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Proxy library with support for async operations.</description>
-    <copyright>Copyright 2015</copyright>
+    <description>Proxy library with support for async operations. Based on https://github.com/kswoll/sexy-proxy but with an enterprise friendly name...</description>
+    <copyright>Copyright 2016</copyright>
     <tags>Dynamic-proxy async proxy</tags>
   </metadata>
 </package>
