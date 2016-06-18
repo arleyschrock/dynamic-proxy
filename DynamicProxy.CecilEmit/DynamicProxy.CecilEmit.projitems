@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f30d843d-1a0b-4665-84ad-39297901ef68</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>DynamicProxy.CecilEmit</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CecilExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CecilProxyTypeFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ClassWeaver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DynamicProxyWeaver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)InPlaceClassWeaver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)InterfaceClassWeaver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MethodWeaver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ModuleWeaver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NonInterfaceClassWeaver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ReverseProxyClassWeaver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TargetedClassWeaver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UnimplementedMethodWeaver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WeaverContext.cs" />
+  </ItemGroup>
+</Project>

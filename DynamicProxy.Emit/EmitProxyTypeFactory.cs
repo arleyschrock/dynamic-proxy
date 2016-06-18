@@ -19,7 +19,7 @@ namespace DynamicProxy.Emit
         private static PropertyInfo invocationProxy = typeof(Invocation).GetProperty("Proxy");
         private static MethodInfo invocationHandlerIsHandlerActive = typeof(InvocationHandler).GetMethod(nameof(InvocationHandler.IsHandlerActive));
 
-        public Type CreateProxyType(Type sourceType)
+        public virtual Type CreateProxyType(Type sourceType)
         {
             string assemblyName = sourceType.Namespace + "." + sourceType.Name.Replace('`', '$') + "$Proxy";
 
@@ -89,7 +89,7 @@ namespace DynamicProxy.Emit
             foreach (var methodInfo in methods)
             {
                 var parameterInfos = methodInfo.GetParameters();
-
+                
                 // Finalize doesn't work if we try to proxy it and really, who cares?
                 if (methodInfo.Name == "Finalize" && parameterInfos.Length == 0 && methodInfo.DeclaringType == typeof(object))
                     continue;
@@ -219,7 +219,7 @@ namespace DynamicProxy.Emit
                 {
                     DefaultInterfaceImplementationFactory.CreateDefaultMethodImplementation(methodInfo, proceedIl);
                 }
-
+                
                 // Implement method
                 var il = method.GetILGenerator();
 
